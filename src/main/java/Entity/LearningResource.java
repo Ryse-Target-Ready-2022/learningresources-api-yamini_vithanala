@@ -2,17 +2,17 @@ package Entity;
 import java.time.LocalDate;
 
 public class LearningResource {
-    private Integer ID;
-    private String Name;
+    private Integer id;
+    private String name;
     private Double costPrice;
     private Double sellingPrice;
     private LocalDate createdDate;
     private LocalDate publishedDate;
     private LocalDate retiredDate;
 
-    public LearningResource(Integer ID, String Name, Double costPrice, Double sellingPrice, LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
-        this.ID = ID;
-        this.Name = Name;
+    public LearningResource(Integer id, String name, Double costPrice, Double sellingPrice, LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
+        this.id = id;
+        this.name = name;
         this.costPrice = costPrice;
         this.sellingPrice = sellingPrice;
         this.createdDate = createdDate;
@@ -22,20 +22,20 @@ public class LearningResource {
     public LearningResource() {
     }
 
-    public Integer getID() {
-        return ID;
+    public Integer getid() {
+        return id;
     }
 
-    public void setID(Integer ID) {
-        this.ID = ID;
+    public void setid(Integer id) {
+        this.id = id;
     }
 
-    public String getName() {
-        return Name;
+    public String getname() {
+        return name;
     }
 
-    public void setResourceName(String resourceName) {
-        this.Name = resourceName;
+    public void setname(String name) {
+        this.Name = name;
     }
 
     public Double getCostPrice() {

@@ -6,6 +6,7 @@ public class LearningResource {
     private String name;
     private Double costPrice;
     private Double sellingPrice;
+    private LearningResourceStatus learningResourceStatus;
     private LocalDate createdDate;
     private LocalDate publishedDate;
     private LocalDate retiredDate;
@@ -15,6 +16,7 @@ public class LearningResource {
         this.name = name;
         this.costPrice = costPrice;
         this.sellingPrice = sellingPrice;
+        this.learningResourceStatus = learningResourceStatus;
         this.createdDate = createdDate;
         this.publishedDate = publishedDate;
         this.retiredDate = retiredDate;
@@ -52,6 +54,14 @@ public class LearningResource {
 
     public void setSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
+    }
+    
+    public LearningResourceStatus getLearningResourceStatus() {
+        return learningResourceStatus;
+    }
+
+    public void setLearningResourceStatus(LearningResourceStatus learningResourceStatus) {
+        this.learningResourceStatus = learningResourceStatus;
     }
 
 

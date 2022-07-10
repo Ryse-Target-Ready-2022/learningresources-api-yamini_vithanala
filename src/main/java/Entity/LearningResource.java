@@ -1,17 +1,42 @@
-package Entity;
-import java.time.LocalDate;
+package com.tgt.rysetii.learningresourcesapiyamini_vithanala.entity;
 
-public class LearningResource {
+import java.io.Serializable;
+import java.time.LocalDate;
+import javax.persistence.*;
+
+@Entity
+@Table(name="Learningresources")
+public class LearningResource implements Serializable {
+    @Id
+    @Column(name = "id")
     private Integer id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "cost_price")
     private Double costPrice;
+
+    @Column(name = "selling_price")
     private Double sellingPrice;
+
+    @Column(name = "learning_resource_status")
+    @Enumerated(EnumType.STRING)
     private LearningResourceStatus learningResourceStatus;
+
+    @Column(name = "created_date")
     private LocalDate createdDate;
+
+    @Column(name = "published_date")
     private LocalDate publishedDate;
+
+    @Column(name = "retired_date")
     private LocalDate retiredDate;
 
-    public LearningResource(Integer id, String name, Double costPrice, Double sellingPrice, LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
+    public LearningResource() {
+    }
+
+    public LearningResource(Integer id, String name, Double costPrice, Double sellingPrice, LearningResourceStatus learningResourceStatus, LocalDate createdDate, LocalDate publishedDate, LocalDate retiredDate) {
         this.id = id;
         this.name = name;
         this.costPrice = costPrice;
@@ -20,8 +45,6 @@ public class LearningResource {
         this.createdDate = createdDate;
         this.publishedDate = publishedDate;
         this.retiredDate = retiredDate;
-    }
-    public LearningResource() {
     }
 
     public Integer getid() {
@@ -37,7 +60,7 @@ public class LearningResource {
     }
 
     public void setname(String name) {
-        this.Name = name;
+        this.name = name;
     }
 
     public Double getCostPrice() {
@@ -55,7 +78,7 @@ public class LearningResource {
     public void setSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
     }
-    
+
     public LearningResourceStatus getLearningResourceStatus() {
         return learningResourceStatus;
     }
@@ -63,8 +86,6 @@ public class LearningResource {
     public void setLearningResourceStatus(LearningResourceStatus learningResourceStatus) {
         this.learningResourceStatus = learningResourceStatus;
     }
-
-
 
     public LocalDate getCreatedDate() {
         return createdDate;
@@ -89,9 +110,21 @@ public class LearningResource {
     public void setRetiredDate(LocalDate retiredDate) {
         this.retiredDate = retiredDate;
     }
+
+    @Override
+    public String toString() {
+        return "LearningResource{" +
+                "id=" + id +
+                ",name='" + name + '\'' +
+                ", costPrice=" + costPrice +
+                ", sellingPrice=" + sellingPrice +
+                ", learningResourceStatus=" + learningResourceStatus +
+                ", createdDate=" + createdDate +
+                ", publishedDate=" + publishedDate +
+                ", retiredDate=" + retiredDate +
+                '}';
+    }
 }
-
-
 
 
 

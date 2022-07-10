@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.*;
 
+@Entity
 @Table(name="Learningresources")
 public class LearningResource implements Serializable {
     @Id
